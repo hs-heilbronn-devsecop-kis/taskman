@@ -52,8 +52,10 @@ jobs:
          codecov
 
       - name: Upload coverage report to Codecov
-        uses: curl -Os https://uploader.codecov.io/latest/macos/codecov chmod +x codecov ./codecov -t ${{ secrets.CODECV_TOKEN }}
-  
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECV_TOKEN }}
+
     #3- Integrate a security scanner into the pipeline that analyses our code and dependencies by snyk.
     #   - name: Set up Node.js
     #     uses: actions/setup-node@v2
