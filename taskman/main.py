@@ -101,6 +101,7 @@ provider = TracerProvider()
 processor = BatchSpanProcessor(ConsoleSpanExporter())
 provider.add_span_processor(processor)
 
+
 # Sets the global default tracer provider
 trace.set_tracer_provider(provider)
 
