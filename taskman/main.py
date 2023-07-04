@@ -28,8 +28,6 @@ app = FastAPI()
 
 my_backend: Optional[Backend] = None
 
-
-
 def get_backend() -> Backend:
     global my_backend  # pylint: disable=global-statement
     if my_backend is None:
